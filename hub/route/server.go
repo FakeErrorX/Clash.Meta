@@ -231,7 +231,7 @@ func startUnix(cfg *Config) {
 
 		// https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/
 		//
-		// Note: As mentioned above in the ‘security’ section, when a socket binds a socket to a valid pathname address,
+		// Note: As mentioned above in the 'security' section, when a socket binds a socket to a valid pathname address,
 		// a socket file is created within the filesystem. On Linux, the application is expected to unlink
 		// (see the notes section in the man page for AF_UNIX) before any other socket can be bound to the same address.
 		// The same applies to Windows unix sockets, except that, DeleteFile (or any other file delete API)
@@ -325,7 +325,7 @@ func authentication(secret string) func(http.Handler) http.Handler {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	render.JSON(w, r, render.M{"hello": "mihomo"})
+	render.JSON(w, r, render.M{"hello": "ErrorX"})
 }
 
 func traffic(w http.ResponseWriter, r *http.Request) {
